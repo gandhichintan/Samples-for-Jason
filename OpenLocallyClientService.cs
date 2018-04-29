@@ -93,22 +93,10 @@ namespace OCC.OpenLocallyClientWindowService
 
         public void openDocWorker_RunWorkerCompleted(object sender, System.ComponentModel.RunWorkerCompletedEventArgs e)
         {
-            //IntPtr server = WTSOpenServer(Environment.MachineName);
-            //Dictionary<string, int> userSessionDict = GetUserSession(server, GetSessionIDs(server));
+            
             Process docProcess = new Process();
             docProcess.Exited += docProcess_Exited;
             docProcess.StartInfo = new ProcessStartInfo(string.Concat(filePath, fileName));
-            //foreach (var userSession in userSessionDict)
-            //{
-            //    docProcess.StartInfo.UserName = userSession.Key;
-            //    break;
-            //}
-            
-            //docProcess.StartInfo.UserName = Environment.UserName;
-            //docProcess.StartInfo.Domain = Environment.UserDomainName;
-            
-            //docProcess.StartInfo.UseShellExecute = false;
-            //docProcess.StartInfo.Verb = "runas";
             docProcess.Start();
         }
 
