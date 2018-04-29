@@ -1,0 +1,9 @@
+﻿<div class="quote {{textColor}}">
+    <p class="title" translate="{{data.title}}"></p>
+    <div class="paragraphs">
+        <p ng-repeat="paragraph in data.paragraphs" translate="{{paragraph}}"></p>
+    </div>
+    <div>
+        <p class="sign" ng-class="{'rotate':data.rotate}" translate="{{data.signature}}"></p>
+    </div>
+</div>

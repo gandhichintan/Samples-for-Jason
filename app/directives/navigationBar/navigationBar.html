@@ -1,0 +1,33 @@
+﻿<div class="navigation">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-6">
+            <div class="previous" ng-click="vm.goToPreviousPage()"
+                 ng-class="{'hover':vm.backClicked && vm.isMobile()}" ng-mousedown="vm.longPress('back')" ng-mouseup="vm.removeHover()" ng-style="{'visibility': vm.showPreviousButton ? 'visible' : 'hidden'}"
+                 ng-if="!vm.inFirstPage()">
+                <div translate="{{'GENERAL_NAVIGATION_BUTTONS_LEFT'}}">
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-4 col-xs-4 paginator hidden-xs hidden-sm">
+            <span ng-hide="vm.surveyInfo.currentIndex == 0">Page {{vm.surveyInfo.currentIndex}} of {{vm.surveyPages.length}}</span>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-6">
+            <div class="next" ng-click="vm.goToNextPage()" ng-mousedown="vm.longPress('next')" ng-mouseup="vm.removeHover()"
+                 ng-style="{'visibility': vm.showNextButton ? 'visible' : 'hidden'}"
+                 ng-class="{'hover':vm.nextClicked && vm.isMobile()}"
+                 ng-if="!vm.inFirstPage()">
+                <div translate="{{'GENERAL_NAVIGATION_BUTTONS_RIGHT'}}">
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-md-4 col-lg-4 col-sm-12 col-xs-12 right">
+            <div class="start" ng-click="vm.hide = true; vm.start()" ng-if="vm.inFirstPage();" ng-hide="vm.hide">
+                {{'GENERAL_NAVIGATION_BUTTONS_START' | translate}}
+            </div>
+        </div>-->
+        <div class="col-md-4 col-lg-4 col-xs-8 col-xs-offset-2 paginator visible-xs visible-sm">
+            <span ng-hide="vm.surveyInfo.currentIndex == 0">Page {{vm.surveyInfo.currentIndex}} of {{vm.surveyPages.length}}</span>
+        </div>
+    </div>
+</div>

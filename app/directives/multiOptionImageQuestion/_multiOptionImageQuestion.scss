@@ -1,0 +1,229 @@
+﻿/**
+    GENERAL
+*/
+
+.multi-option-image-question {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+
+    /*DEFAULTS*/
+
+    li{
+        list-style: none;
+        &.puller{
+            clear: both;
+        }
+        &.option{
+            list-style: none;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            background-color: lightgray;
+            float: left;
+            position: relative;
+            margin: 5px;
+
+            &.mouseover{
+                background-color: whitesmoke;
+            }
+            &.selected{
+                background-color: whitesmoke;
+            }
+        }
+    }
+}
+
+/**
+    SPECIFIC
+*/
+
+/**
+    YES-NO BUTTONS
+*/
+.yes-no-buttons .multi-option-image-question {
+    max-width: 270px;
+    max-height: 50px;
+
+    li
+        &.option{
+        height: 44px;
+        width: 124px;
+        cursor: pointer;
+        color: white;
+        background-color: #A9B853;
+        border: 1px solid #668f1b;
+        /*border: 2px solid #668f1b;*/
+        border-bottom-width: 6px;
+        padding: 5px 10px 3px 10px;
+        font-size: 1.3em;
+
+        &:hover{
+            background-color: #95b500;
+        }
+
+        &:active, &.selected{
+            background-color: #668f1b;
+            border-bottom-width: 1px;
+            margin-top: 8px;
+        }
+    }
+}
+
+/**
+    IMAGES QUESTION
+*/
+
+.images-question, .multi-option-image-question {
+    max-width: 390px;
+    padding: 5px;
+    li{
+        &.option{
+            height: 4em;
+            width: 18em;
+            float: left;
+            cursor: pointer;
+            color: white;
+            background-position: center;
+            overflow: hidden;
+            transition: all 0.1s ease-in;
+
+            &.selected, &.selected:hover{
+                border-color: red;
+                box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+            }
+
+            &.mouseover{
+               background-color: whitesmoke;            
+            }
+            
+            &:hover{
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            }
+                                   
+            @mixin optionLogo($id, $folder, $bgColor){
+                &.option-#{$id}{
+                    background-size:  67% !important;
+                    background-position-y: 50% !important;
+                    background-position-x: 50% !important;
+                    background: url("../images/#{$folder}/logo_negative.png") no-repeat;
+                    background-color: #{$bgColor};
+                }
+            }
+
+            @include optionLogo(0, 'motherhood', '#A0AEE6');
+            @include optionLogo(1, 'apitp', 'black');
+            @include optionLogo(2, 'dm', '#EA1F77');
+
+
+            .text-container{
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                margin: 0;
+                background: gray;
+                min-height: 40px;
+                display: none;
+                table-layout: fixed;
+            }
+
+            .text-wrapper{
+                display: table-cell;
+                vertical-align: middle;
+                overflow: hidden;
+                width: 115px;
+                position: relative;
+                text-overflow: ellipsis;
+            }
+        }
+            
+    }
+}
+
+    /**
+        IMAGES
+    */
+
+
+@media(max-width: 1199px) {
+    .images-question .multi-option-image-question {
+        max-width: 450px;
+
+        li.option{
+            width: 135px;
+            height: 135px;
+
+            .text-wrapper{
+                height: 40px;
+                width: 135px;
+            }
+        }
+    }
+}
+
+
+@media(max-width: 480px) {
+    .images-question .multi-option-image-question {
+        max-width: 270px;
+        margin-left: -0.5em;
+
+        li.option{
+            width: 120px;
+            height: 130px;
+
+            .text-wrapper{
+                width: 120px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+/**
+    MULTIPLE BUTTONS
+*/
+
+.multiple-buttons .multi-option-image-question {
+    max-width: 100%;
+    margin: 0 20px;
+
+    li.option{
+        height: auto;
+        width: 100%;
+        float: left;
+        cursor: pointer;
+        color: white;
+        background-color: #A9B853;
+        border: 2px solid #668f1b;
+       /* margin: 3px 0;*/
+        padding: 5px 10px 3px 10px;
+
+        &:hover{
+            background-color: #95b500;
+        }
+        
+        &.selected{
+            background-color: #669f1b; /*todo ask Elisa about colors*/
+        }
+    }
+}
+
+.multiple-buttons.disabled multi-option-image-question{
+    li.option {
+        background-color: lightgray; /*todo ask Elisa about colors*/
+        border: 2px solid gray;
+        color: gray;
+
+        &:hover{
+            background-color: gray;
+            color: white;
+        }
+
+        &.selected{
+            background-color: gray; /*todo ask Elisa about colors*/
+            color: white;
+        }
+    }
+}

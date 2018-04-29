@@ -1,0 +1,12 @@
+﻿<div ng-controller="cvSelectSimpleInnerController" class="cvSelectSimpleContent">
+    <div class="option" ng-repeat="option in options track by option.value" ng-click="select(option)">
+        <span>{{option.text | translate}}</span>
+    </div>
+</div>
+<!--
+<table class="table table-bordered table-condensed" ng-controller="cvSelectSimpleInnerController">
+    <tr ng-repeat="option in options track by option.value" ng-click="select(option)">
+        <td>{{!option.text}}</td>
+    </tr>
+</table>
+-->

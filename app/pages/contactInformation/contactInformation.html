@@ -1,0 +1,16 @@
+    <div class="col-sm-12 col-md-5 col-lg-5 col-xs-12 questionsContainer animated fadeIn" ng-cloak>
+        <h2 ng-if="model.title" translate="{{model.title.key}}" translate-value="model.title.interpolations"></h2><br />
+        <p ng-repeat="paragraph in texts track by $index" translate="{{paragraph.key}}" translate-values="paragraph.interpolations"></p>
+        <div class="question" ng-repeat="question in model.questions[model.currentGroupIndex] track by $index">
+            <div class="" id="question-{{$index}}" ng-if="question.visible">
+                <question item="question" lang-code="langCode"></question>
+            </div>
+        </div>
+</div>
+<div class="col-md-5 col-md-offset-6 col-lg-5 autoMinHeight">
+    <navigation-bar></navigation-bar>
+    <div class="disclaimer">
+        <!--<span>{{'PAGES_10_FOOTER_1' | translate}}</span>-->
+        <span>No purchase necessary to enter or win. A purchase will not increase your chances of winning. Open to legal residents of the 50 United States, 18 years of age or older, except Puerto Rico, Guam, the U.S. Virgin Islands, U.S. Military installations in foreign countries. Void where prohibited. See <a target="_blank" href="/company_res/telltacotimenw.survey/survey/officialrules/telltacotimenw_official_rules.html?v=01132016">Official Rules</a> for details.</span>
+    </div>
+</div>

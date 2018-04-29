@@ -1,0 +1,16 @@
+﻿<div class="cv-stars-question-container">
+    <div>
+        <span ng-repeat="star in stars track by $index"
+              ng-class="styles($index)"
+              ng-click="click($index)"
+              ng-mouseover="mouseover($index)"
+              ng-mouseout="mouseout($index)"
+              ng-disabled="data.answers[0] === -1"
+              title="{{$index+1}}">
+        </span>
+        <div ng-show="showNa">
+            NA
+            <input type="checkbox" class="na-checkbox" ng-model="naValue" ng-change="toggleNa()" style="text-align: center;" />
+        </div>
+    </div>
+</div>

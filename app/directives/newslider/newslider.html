@@ -1,0 +1,23 @@
+﻿
+<div class="slider-wrapper" id="wrapper_{{vm.slider.id}}"  ng-class="{'rz-pointer-tooltip':vm.isDragging() && vm.isMobile(),'rz-pointer-tooltip-hidden':!vm.isDragging()}">
+    <rzslider rz-slider-model="modelinterior"
+              rz-slider-options="slider.options"
+              rz-slider-tpl-url="/app/directives/newslider/rzslider.html"
+              rz-slider-na ="vm.isNa()"
+              rz-slider-drag="vm.isDragging()"
+              
+              ng-class="{'rz-pointer-na':vm.isNa()}">
+    </rzslider>
+    <div class="thumbs-container upper-thumbs-container" ng-if="vm.data.properties.headers.left && vm.data.properties.headers.right">
+        <div class="thumb left-thumb"></div>
+        <div class="thumb-header-text left-thumb-header-text">
+            <p ng-if="vm.data.properties.headers.left != 'thumbsDown'">{{vm.data.properties.headers.left}}</p>
+            <p ng-show="vm.data.properties.headers.left == 'thumbsDown'"><img ng-src="{{environment.imagesDirectory}}/images/thumb-down-button.png"/></p>
+        </div>
+        <div class="thumb right-thumb"></div>
+        <div class="thumb-header-text right-thumb-header-text">
+            <p ng-if="vm.data.properties.headers.right != 'thumbsUp'">{{vm.data.properties.headers.right}}</p>
+            <p ng-show="vm.data.properties.headers.right == 'thumbsUp'"><img ng-src="{{environment.imagesDirectory}}/images/thumb-up-button.png" /></p>
+        </div>
+    </div>
+</div>

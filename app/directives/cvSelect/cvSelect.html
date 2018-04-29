@@ -1,0 +1,9 @@
+﻿<div class="cvSelectWrapper" ng-class="{'closed': !isOpen}">
+    <div class="select" ng-class="{'empty': !contentTemplate || !enabled}" ng-click="toggle()">
+        <div class="prompt">{{prompt | translate}}</div>
+        <i class="glyphicon glyphicon-chevron-down"></i>
+    </div>
+    <div class="optionsWrapper" ng-mouseleave="close('leave')" ng-show="isOpen">
+        <div ng-include src="getContentTemplate()"></div>
+    </div>
+</div>

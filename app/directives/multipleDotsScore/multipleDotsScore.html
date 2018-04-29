@@ -1,0 +1,13 @@
+﻿<div class="multipleDotsScoreContainer">
+    <ul class="multiple-dots-list list-inline">
+        <li ng-repeat="(key, dot) in options">
+            <div class="dot-label">
+                <div>{{dot.text}}</div>
+            </div>
+            <div class="dot-container">
+                <div class="dot" ng-style="dot.spriteStyle" ng-click="select(key,dot)" ng-mouseover="hoverUntil(key)" ng-mouseleave="untoggleNotChecked()"></div>
+            </div>
+        </li>
+    </ul>
+    <div style="clear: both"></div>
+</div>

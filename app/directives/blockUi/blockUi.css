@@ -1,0 +1,41 @@
+﻿.blockUiContainer-outer {
+ display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.blockUiContainer-middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.blockUiContainer-inner {
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 280px;
+    border: #000000 5px solid;
+    border-radius: 25px;
+}
+
+.blockUiContainer-inner span {
+    display: block;
+}
+
+.blockUiContainer-inner img {
+    height: 50px;
+}
+
+.blockUiContainer-inner .loading-spinner {
+    background-image: url("loading.gif");
+    width: 32px;
+    height: 32px;
+    margin: auto;
+}

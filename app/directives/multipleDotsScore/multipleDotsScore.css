@@ -1,0 +1,48 @@
+﻿.multipleDotsScoreContainer {
+    margin-top: 6px;
+}
+ul.multiple-dots-list {
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul.multiple-dots-list li {
+    float: left;
+    width: 25%;
+    font-size: 0.8em;
+}
+
+div.dot-label, div.dot-container {
+    width: 100%;
+    text-align: center;
+}
+
+
+div.dot-label {
+    height: 40px;
+}
+
+div.dot-label div{
+}
+
+div.dot-container {
+    height: 35px;
+}
+
+div.dot {
+    background: url("sprite-scale-4-santander.png");
+    background-repeat: no-repeat;
+    width: 34px;
+    height: 32.8px;
+    margin: 0 auto;
+    z-index: 100;
+}
+
+@media (max-width: 990px) {
+    ul.multiple-dots-list li {
+        font-size: 0.7em;
+    }
+}

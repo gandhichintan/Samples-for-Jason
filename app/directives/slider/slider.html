@@ -1,0 +1,43 @@
+﻿<div class="slider-wrapper" id="wrapper_{{vm.slider.id}}">
+
+    <div class="thumbs-container upper-thumbs-container" ng-if="vm.data.properties.headers.left && vm.data.properties.headers.right">
+        <div class="thumb left-thumb"></div>
+        <div class="thumb-header-text left-thumb-header-text">
+            <p><b translate="{{vm.data.properties.headers.left}}"></b></p>
+        </div>
+        <div class="thumb right-thumb"></div>
+        <div class="thumb-header-text right-thumb-header-text">
+            <p><b translate="{{vm.data.properties.headers.right}}"></b></p>
+        </div>
+    </div>
+    <div class="clearfix">  </div>
+    <div class="tooltip" ng-style="vm.tooltipVisibility"></div>
+    <ul class="pips-list">
+        <li ng-repeat="(key, pip) in vm.pips track by $index" ng-style="getPipStyle(key)">{{pip}}</li>
+    </ul>
+
+    <div class="clearfix">  </div>
+    <div class="thumbs-container lower-thumbs-container">
+        <div class="thumb left-thumb"></div>
+        <div class="thumb-text left-thumb-text">0</div>
+        <div class="thumb-text left-thumb-text lowerScore">1</div>
+        <div class="thumb-text left-thumb-text lowerScore">2</div>
+        <div class="thumb-text left-thumb-text lowerScore">3</div>
+        <div class="thumb-text left-thumb-text lowerScore">4</div>
+        <div class="thumb-text left-thumb-text lowerScore">5</div>
+        <div class="thumb-text left-thumb-text middleScore">6</div>
+        <div class="thumb-text left-thumb-text middleScore">7</div>
+        <div class="thumb-text left-thumb-text middleScore">8</div>
+        <div class="thumb-text left-thumb-text middleScore">9</div>
+        <div class="thumb right-thumb"></div>
+        <div class="thumb-text left-thumb-text middleScore">10</div>
+    </div>
+
+    <div class="na-checkbox-container" ng-show="vm.naEnabled">
+        <div>
+            NA
+            <input type="checkbox" class="na-checkbox" ng-model="vm.na" ng-true-value="true" ng-false-value="false" ng-change="vm.toggleNa()" style="text-align: center;" />
+        </div>
+    </div>
+    <div class="slider-final-blank-row" ng-hide="vm.naEnabled"></div>
+</div>

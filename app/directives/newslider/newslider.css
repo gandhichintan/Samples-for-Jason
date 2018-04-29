@@ -1,0 +1,76 @@
+﻿span .rz-bar {
+    display:none;
+}
+
+.rzslider .rz-ticks .rz-tick{
+    height:5px;
+    width:5px;
+}
+
+.rzslider .rz-ticks .rz-tick .rz-tick-value{
+    top:20px;
+    font-size:12px;
+    color:gray;
+}
+
+span:focus{
+    outline:none;
+}
+
+.rzslider  .rz-pointer-label{
+    position:relative;
+    color:white; 
+    font-size:18px;
+    padding:2px;
+    text-align:center;
+    font-style:normal;
+    width:100%;
+}
+
+.rz-tick-legend {
+    color:gray;
+    font-size:10px;
+    font-weight:100;
+}
+
+.rzslider .rz-ticks .rz-fake-tick {
+    
+   left:11px;
+
+}
+
+.rzslider .rz-tick-legend{
+    left:3px;
+}
+
+.rzslider{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+.slider-wrapper .upper-thumbs-container{
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.rz-pointer-na .rz-pointer{
+    background-color:#bababa;
+   
+}
+
+.rz-pointer-na .rz-pointer-label{
+     font-size:20px !important;
+    
+}
+
+.rzslider.rz-pointer-na  .rz-pointer-label{
+     padding:0px;
+}
+
+.rz-pointer-tooltip .rz-tooltip{
+    visibility:visible !important;
+}
+
+/*.rz-pointer-tooltip-hidden .rz-tooltip{
+    visibility:hidden;
+}*/

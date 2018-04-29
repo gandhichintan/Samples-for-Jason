@@ -1,0 +1,16 @@
+﻿<div>    
+    <!-- text area -->
+    <textarea ng-show="vm.$scope.model.properties.type == 'textarea'" ng-model="vm.$scope.model.answers[0]" placeholder="{{vm.$scope.model.properties.placeholder | translate}}" maxlength="2000"></textarea>
+    <!-- text input -->
+    <div ng-show="vm.$scope.model.properties.type == 'textinput'" class="textquestion-input-wrapper">
+        <input type="text" maxlength="50" ng-model="vm.$scope.model.answers[0]" placeholder="{{vm.$scope.model.properties.placeholder | translate}}" />
+    </div>
+    <!-- email input -->
+    <div ng-show="vm.$scope.model.properties.type == 'email'" class="textquestion-input-wrapper">
+        <input type="email" maxlength="40" ng-model="vm.$scope.model.answers[0]" placeholder="{{vm.$scope.model.properties.placeholder | translate}}"/>
+    </div>
+    <!-- phone input -->
+    <div ng-show="vm.$scope.model.properties.type == 'phone'" class="textquestion-input-wrapper">
+        <input type="number" ng-model="vm.$scope.model.answers[0]" placeholder="{{vm.$scope.model.properties.placeholder | translate}}"/>
+    </div>
+</div>

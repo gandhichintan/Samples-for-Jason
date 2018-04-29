@@ -1,0 +1,10 @@
+﻿<div class="select">
+    <div ng-click="vm.toggle()">
+        <div class="prompt">{{vm.data.answers[0] || vm.timeModel}}</div>
+    </div>
+    <div class="optionsWrapper small" ng-show="vm.isOpen">
+        <div class="option" ng-repeat="option in vm.hours track by $index " ng-click="vm.setTime(option)" id="timeslot_{{$index}}" cv-scroll-to data="option">
+            <span ng-class="{ 'highlighted': vm.data.answers[0] == option }">{{option}}</span>
+        </div>
+    </div>
+</div>

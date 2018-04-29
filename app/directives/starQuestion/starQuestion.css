@@ -1,0 +1,23 @@
+﻿/* Star container */
+.cv-stars-question-container {
+    cursor: pointer;
+    color: #aaa;
+    text-align: center;
+}
+
+/* Star selected color */
+.cv-stars-question-container .cv-star-selected {
+    color: #EFA726;
+}
+
+/* Star mouse hover color */
+.cv-stars-question-container .cv-star-preview {
+    color: #FECF6E;
+}
+/* Star size */
+.cv-stars-question-container .cv-star-size {
+    width: 25px;
+    height: 25px;
+    font-size: 25px;
+    margin: 2px 8px;
+}

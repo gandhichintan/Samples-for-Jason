@@ -1,0 +1,87 @@
+﻿
+
+.quote {
+    font-size: 1em;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+    font-family:"iberia_italic";
+    top: 75px;
+
+}
+
+.quote .paragraphs{
+    font-size:16px;
+    top:75px;
+ }
+
+@media (min-width: 820px) {
+
+    .quote {
+            color: #646464;  
+    }
+
+     .quote .title {
+        position:absolute;
+        left:70px;
+        font-size: 24px;
+        font-family:"iberia_regular";
+        font-weight: 500;
+    }
+
+    .quote .paragraphs{
+
+        position: absolute;
+        bottom: 35px;
+        left: 10px;
+        width: 340px;
+      
+         /* Safari */
+        -webkit-transform: rotate(-3deg);
+
+        /* Firefox */
+        -moz-transform: rotate(-3deg);
+
+        /* IE */
+        -ms-transform: rotate(-3deg);
+
+        /* Opera */
+        -o-transform: rotate(-3deg);
+
+    }
+
+}
+
+@media (max-width: 820px) {
+    .quote {
+        color: #646464;  
+        width:250px;
+       padding-top:20px;      
+    }
+
+     .quote .title {
+        font-size: 20px;
+        font-family:"iberia_regular";
+        font-weight: normal;
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .quote .paragraphs{
+        font-size:12px;
+      
+         /* Safari */
+        -webkit-transform: rotate(-3deg);
+
+        /* Firefox */
+        -moz-transform: rotate(-3deg);
+
+        /* IE */
+        -ms-transform: rotate(-3deg);
+
+        /* Opera */
+        -o-transform: rotate(-3deg);
+    }
+}

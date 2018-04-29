@@ -1,0 +1,3 @@
+﻿interface IAction {
+    run: { (): void };
+}

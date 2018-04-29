@@ -1,0 +1,22 @@
+/*
+
+$.Link (part of noUiSlider) - WTFPL */
+(function (c) {
+    function m(a, c, d) { if ((a[c] || a[d]) && a[c] === a[d]) throw Error("(Link) '" + c + "' can't match '" + d + "'.'"); } function r(a) {
+        void 0 === a && (a = {}); if ("object" !== typeof a) throw Error("(Format) 'format' option must be an object."); var h = {}; c(u).each(function (c, n) {
+            if (void 0 === a[n]) h[n] = A[c]; else if (typeof a[n] === typeof A[c]) { if ("decimals" === n && (0 > a[n] || 7 < a[n])) throw Error("(Format) 'format.decimals' option must be between 0 and 7."); h[n] = a[n] } else throw Error("(Format) 'format." + n + "' must be a " + typeof A[c] +
+            ".");
+        }); m(h, "mark", "thousand"); m(h, "prefix", "negative"); m(h, "prefix", "negativeBefore"); this.r = h
+    } function k(a, h) { "object" !== typeof a && c.error("(Link) Initialize with an object."); return new k.prototype.p(a.target || function () { }, a.method, a.format || {}, h) } var u = "decimals mark thousand prefix postfix encoder decoder negative negativeBefore to from".split(" "), A = [2, ".", "", "", "", function (a) { return a }, function (a) { return a }, "-", "", function (a) { return a }, function (a) { return a }]; r.prototype.a = function (a) { return this.r[a] };
+    r.prototype.L = function (a) { function c(a) { return a.split("").reverse().join("") } a = this.a("encoder")(a); var d = this.a("decimals"), n = "", k = "", m = "", r = ""; 0 === parseFloat(a.toFixed(d)) && (a = "0"); 0 > a && (n = this.a("negative"), k = this.a("negativeBefore")); a = Math.abs(a).toFixed(d).toString(); a = a.split("."); this.a("thousand") ? (m = c(a[0]).match(/.{1,3}/g), m = c(m.join(c(this.a("thousand"))))) : m = a[0]; this.a("mark") && 1 < a.length && (r = this.a("mark") + a[1]); return this.a("to")(k + this.a("prefix") + n + m + r + this.a("postfix")) }; r.prototype.w =
+    function (a) {
+        function c(a) { return a.replace(/[\-\/\\\^$*+?.()|\[\]{}]/g, "\\$&") } var d; if (null === a || void 0 === a) return !1; a = this.a("from")(a); a = a.toString(); d = a.replace(RegExp("^" + c(this.a("negativeBefore"))), ""); a !== d ? (a = d, d = "-") : d = ""; a = a.replace(RegExp("^" + c(this.a("prefix"))), ""); this.a("negative") && (d = "", a = a.replace(RegExp("^" + c(this.a("negative"))), "-")); a = a.replace(RegExp(c(this.a("postfix")) + "$"), "").replace(RegExp(c(this.a("thousand")), "g"), "").replace(this.a("mark"), "."); a = this.a("decoder")(parseFloat(d +
+        a)); return isNaN(a) ? !1 : a
+    }; k.prototype.K = function (a, h) { this.method = h || "html"; this.j = c(a.replace("-tooltip-", "") || "<div/>")[0] }; k.prototype.H = function (a) { this.method = "val"; this.j = document.createElement("input"); this.j.name = a; this.j.type = "hidden" }; k.prototype.G = function (a) { function h(a, c) { return [c ? null : a, c ? a : null] } var d = this; this.method = "val"; this.target = a.on("change", function (a) { d.B.val(h(c(a.target).val(), d.t), { link: d, set: !0 }) }) }; k.prototype.p = function (a, h, d, k) {
+        this.g = d; this.update = !k; if ("string" ===
+        typeof a && 0 === a.indexOf("-tooltip-")) this.K(a, h); else if ("string" === typeof a && 0 !== a.indexOf("-")) this.H(a); else if ("function" === typeof a) this.target = !1, this.method = a; else { if (a instanceof c || c.zepto && c.zepto.isZ(a)) { if (!h) { if (a.is("input, select, textarea")) { this.G(a); return } h = "html" } if ("function" === typeof h || "string" === typeof h && a[h]) { this.method = h; this.target = a; return } } throw new RangeError("(Link) Invalid Link."); }
+    }; k.prototype.write = function (a, c, d, k) {
+        if (!this.update || !1 !== k) if (this.u = a, this.F = a =
+        this.format(a), "function" === typeof this.method) this.method.call(this.target[0] || d[0], a, c, d); else this.target[this.method](a, c, d)
+    }; k.prototype.q = function (a) { this.g = new r(c.extend({}, a, this.g instanceof r ? this.g.r : this.g)) }; k.prototype.J = function (a) { this.B = a }; k.prototype.I = function (a) { this.t = a }; k.prototype.format = function (a) { return this.g.L(a) }; k.prototype.A = function (a) { return this.g.w(a) }; k.prototype.p.prototype = k.prototype; c.Link = k
+})(window.jQuery || window.Zepto);

@@ -1,0 +1,7 @@
+	<div class="checkbox left">
+        <span ng-repeat="option in vm.data.properties.options">
+			<input id="checkbox_{{$index}}" type="checkbox" name="test" ng-value="option"  ng-checked="option.checked">
+			<label ng-click="vm.setAnswer(option, $event); option.checked = !option.checked;" for="{{option}}">{{option.value}}</label>
+			<br>
+		</span>	
+	</div>

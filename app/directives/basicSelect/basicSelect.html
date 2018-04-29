@@ -1,0 +1,10 @@
+﻿<div class="select">
+  <div ng-class="hasNoData() ? 'empty' : 'filled'" ng-click="toggle()">
+    <div class="prompt" translate="{{getText(data.properties.selected)}}" translate-values="getInterpolations(data.properties.selected)"></div>
+  </div>
+  <div class="optionsWrapper" ng-hide="!isOpen || hasNoData()">
+    <div class="option" ng-repeat="option in data.properties.options track by option.value" ng-click="select(option)">
+      <span translate="{{getText(option)}}" translate-values="getInterpolations(option)"></span>
+    </div>
+  </div>
+</div>

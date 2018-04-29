@@ -1,0 +1,191 @@
+﻿/* GENERAL */
+
+div.slider {
+    margin-top: 0px;
+}
+
+/*div.slider, div.noUi-base, div.noUi-origin {
+    height: 10px;
+}*/
+
+/*div.noUi-base {
+    height: 30px !important;
+}*/
+
+div.noUi-origin {
+    margin-top: 10px;
+}
+
+div.noUi-handle {
+    border: none;
+    box-shadow: none;
+}
+
+/*.noUi-value {
+    position: absolute;
+}*/
+
+.noUi-handle:before,
+.noUi-handle:after {
+    content: none !important;
+}
+
+.default-dot, .actived-dot {
+    background-position: 0 0;
+    margin-top: -20px !important;
+}
+
+/**
+    THUMBS
+*/
+.thumbs-container {
+    width: 102%;
+}
+
+    .thumbs-container .left-thumb {
+        float: left;
+    }
+
+    .thumbs-container .right-thumb {
+        float: right;
+    }
+
+/**
+    NA
+*/
+.slider-wrapper input.na-checkbox {
+    margin-top: 20px;
+}
+
+/**
+    PIPS
+*/
+.pips-list {
+    list-style-type: none;
+}
+
+    .pips-list li {
+        position: absolute;
+        margin-top: 10px;
+    }
+
+/**
+    TOOLTIPS
+*/
+
+.tooltip {
+    display: none;
+}
+
+/*@media(max-width:990px) {
+    .tooltip {
+        display: block;
+    }
+}*/
+
+/* CLIENT SPECIFIC */
+
+
+.slider-wrapper {
+    width: 260px;
+    margin-left: 10px;
+    min-height: 40px;
+}
+
+    .slider-wrapper .upper-thumbs-container{
+        margin-bottom:0px;
+    }
+
+    .slider-wrapper .lower-thumbs-container{
+        margin-top:30px;
+    }
+
+    .slider-wrapper .thumb-text {
+        font-size: 0.8em;
+        color: #9c9f9f;
+    }
+
+    .slider-wrapper .thumb-header-text {
+        font-size: 0.8em;
+        height:40px;
+       
+    }
+
+    .slider-wrapper .thumb-text.left-thumb-text {
+        float: left;
+        text-align: left;
+    }
+
+    .slider-wrapper .thumb-text.right-thumb-text {
+        text-align: right;
+    }
+
+
+    .slider-wrapper .thumb-header-text.left-thumb-header-text {
+        float: left;
+        text-align: left;
+        color:#DA0828;
+        border-left: 3px dotted;
+        border-color:#DA0828;
+        display:inline-block;
+        width:45%;
+        padding-left:5px;   
+    }
+
+    .slider-wrapper .thumb-header-text.right-thumb-header-text {
+        float: right;
+        text-align: right;
+        color:#6FB153;
+        border-right: 3px dotted;
+        border-color:#6FB153;
+        display:inline-block;
+        width:45%;
+        padding-right:5px;
+        
+    }
+
+    .slider-wrapper p{
+         white-space: pre; 
+         font-size:14px;
+         margin-top:-6px;
+         
+    }
+    .slider{
+        position:relative;
+        top:20px;     
+    }
+
+/*
+    IMAGES
+*/
+.slider.noUi-target {
+    background-image: url("../../../company_res/TellTacoTimeNW.Survey/survey/general/slider/slider-colored-dots.png");
+    height: 5px;
+    border: 0;
+}
+
+.noUi-handle {
+    background-image: url("../../../company_res/TellTacoTimeNW.Survey/survey/general/slider/tooltip-all.png");
+    height: 34px !important;
+}
+
+.actived-dot {
+    background-image: url("../../../company_res/TellTacoTimeNW.Survey/survey/general/slider/tooltip-all.png");
+}
+
+.tooltip {
+    background-image: url("../../../company_res/TellTacoTimeNW.Survey/survey/general/slider/tooltip-all-t.png");
+    position: relative;
+    
+    width: 29px;
+    margin-left: -15px;
+    margin-top: -30px;
+}
+
+/* Scores */
+.lowerScore {
+    margin-left: 14.7px;
+}
+.middleScore{
+    margin-left: 18.8px;
+}

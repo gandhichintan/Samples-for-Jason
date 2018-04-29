@@ -1,0 +1,19 @@
+﻿<div class="squares-slider-wrapper">
+    <br />
+    <div class="left-label">
+        <span translate="{{data.properties.headers.left}}" />
+    </div>
+    <div class="right-label">
+        <span translate="{{data.properties.headers.right}}" />
+    </div>
+    <table class="squares-slider">
+        <tr>
+            <td class="square" ng-repeat="square in squares track by $index"
+                ng-mouseover="over(square)" ng-mouseout="out(square)" ng-click="select(square)"
+                ng-class="{active: isActive(square), selected: isSelected(square)}">
+                <!--ng-style="{width: squareWidth}"-->
+                {{square}}
+            </td>
+        </tr>
+    </table>
+</div>

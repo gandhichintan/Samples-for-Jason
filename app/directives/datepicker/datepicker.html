@@ -1,0 +1,21 @@
+﻿<div class="datepicker-wrapper">
+  <input type="text" ng-model="vm.model" ng-change="vm.modelChange()" class="form-control datepicker" ng-if="vm.data.properties.interface == ('textbox' || null)" ng-click="vm.open()">
+
+  <div class="input-group date" ng-if="vm.data.properties.interface == 'component'" style="position: relative">
+    <input type="text" ng-model="vm.model" ng-change="vm.modelChange()" class="form-control datepicker" ng-click="vm.open()">
+    <span class="input-group-addon" ng-click="vm.open()">
+      <i class="glyphicon glyphicon-calendar"></i>
+    </span>
+  </div>
+
+  <div class="datepicker" ng-if="vm.data.properties.interface == 'embedded'"></div>
+
+  <div class="input-daterange input-group datepicker" ng-if="vm.data.interface == 'range'">
+    <input type="text" class="input-sm form-control" name="start" />
+    <span class="input-group-addon">
+      <i class="glyphicon glyphicon-resize-horizontal"></i>
+    </span>
+    <input type="text" class="input-sm form-control" name="end" />
+  </div>
+
+</div>

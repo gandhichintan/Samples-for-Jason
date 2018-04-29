@@ -1,0 +1,116 @@
+﻿<div class="questionContainer {{getItemCssClass()}}" ng-show="item.visible">
+    <div class="label-container" ng-if="item.title">
+      <label ng-hide="item.type === 'singleCheckbox'" class="question-label" translate="{{item.title.key}}" translate-values="item.title.interpolations"> </label> <!-- {{item.type}} {{item.properties.options}}{{item.required}} -->
+    </div>
+
+    <!-- 4 options directive -->
+    <div ng-if="item.type == '4options'" class="question-container">
+      <multiple-dots-score data="item" ng-model="score"></multiple-dots-score>
+    </div>
+
+    <!-- slider 1_10 -->
+    <!--<div ng-if="item.type == 'green_dot_1_10'" class="question-container">
+      <slider data="item" ng-model="item.answers[0]"></slider>
+    </div>-->
+
+    <!-- slider -->
+    
+    <!--<div ng-if="item.type == 'slider'" class="question-container">
+      <slider data="item" ng-model="item.answers[0]"></slider>
+    </div>-->
+
+    <div ng-if="item.type == 'slider'" class="question-container">
+        <newslider data="item" ng-model="item.answers[0]" rz-slider-tpl-url=""></newslider>
+    </div>
+
+      <div ng-if="item.type == 'green_dot_1_10'" class="question-container">
+          <newslider data="item" ng-model="item.answers[0]"></newslider>
+      </div>
+
+    <!-- squares slider -->
+    <div ng-if="item.type == 'squaresSlider'" class="question-container">
+        <squares-slider data="item" ng-model="item.answers[0]"></squares-slider>
+    </div>
+
+    <!-- text area -->
+    <div ng-if="item.type == 'textbox'" class="question-container">
+      <text-question ng-model="item"></text-question>
+    </div>
+
+    <!-- bool question (YES NO ) -->
+    <div ng-if="item.type == 'boolQuestion'" class="question-container">
+      <bool-question data="item" ng-model="score5"></bool-question>
+    </div>
+
+    <!-- stars question -->
+    <div ng-if="item.type == 'stars'" class="question-container">
+      <star-question data="item" ng-model="score6"></star-question>
+    </div>
+
+    <!-- singlechoice question todo is this in use??? -->
+    <div ng-if="item.type == 'singlechoice'" class="question-container">
+      <multi-option-question data="item" ng-model="score7"></multi-option-question>
+    </div>
+
+    <!-- multiplechoice question -->
+    <div ng-if="item.type == 'multiplechoice'" class="question-container">
+      <multi-option-question data="item" lang-code="langCode" ng-model="score7"></multi-option-question>
+    </div>
+    
+    <!-- multioptionimage question -->
+    <div ng-if="item.type == 'multiOptionImageQuestion'" class="question-container">
+        <multi-option-image-question data="item" ng-model="item.answers[0]"></multi-option-image-question>
+    </div>
+
+    <!-- modal question -->
+    <div ng-if="item.type == 'modalquestion'" class="question-container">
+      <modal-question data="item" ng-model="score7"></modal-question>
+    </div>
+
+    <!-- enhanced select question -->
+    <div ng-if="item.type == 'select'" class="question-container">
+      <enhanced-select data="item" ng-model="item.answers"></enhanced-select>
+    </div>
+
+    <!-- select simple question -->
+    <div ng-if="item.type == 'basicSelect'" class="question-container">
+      <basic-select data="item" ng-model="item.answers"></basic-select>
+    </div>
+
+    <!-- checkbox question -->
+    <!--<div ng-if="item.type == 'checkbox'" class="question-container">
+      <multi-option-question data="item" ng-model="item.answers[0]"></multi-option-question>
+    </div>-->
+
+    <!-- datepicker question -->
+    <div ng-if="item.type == 'datepicker'" class="question-container">
+      <datepickero data="item" ng-model="item.answers[0]"></datepickero>
+    </div>
+
+    <!-- timepicker question -->
+    <div ng-if="item.type == 'timepicker'" class="question-container">
+        <input type="text" cv-timepicker ng-model="time" data="item" />
+    </div>
+
+
+    <!-- radioButton question -->
+    <div ng-if="item.type == 'radioButtons'" class="question-container">
+        <cv-radiobutton data="item" ng-model="item.answers" ></cv-radiobutton>
+    </div>
+
+      <!-- checkbox question -->
+      <div ng-if="item.type == 'checkbox'" class="question-container">
+          <cv-checkbox data="item" ng-model="item.answers"></cv-checkbox>
+      </div>
+    
+    <!-- dropdowns question -->
+    <div ng-if="item.type == 'dropdown'" class="question-container">
+        <drop-down data="item" ng-model="item.answers"></drop-down>
+    </div>
+
+    <!-- single check question -->
+    <div ng-if="item.type == 'singleCheckbox'" class="question-container">
+        <single-checkbox data="item.title" ng-model="item"></single-checkbox>
+    </div>
+
+</div>

@@ -1,0 +1,21 @@
+        <div class="col-sm-12 col-md-5 col-lg-5 col-xs-12 surveyQuestions z-index-9999 animated slideInRight">
+            <div class="item-separator-md visible-sm visible-xs"></div>
+            <h1 ng-if="title" translate="{{title.key}}" translate-values="title.interpolations"></h1>
+            <p class="header-text" ng-repeat="headerParagraph in header track by $index" translate="{{headerParagraph.key}}" translate-values="headerParagraph.interpolations"></p>
+            <p ng-repeat="paragraph in texts track by $index" translate="{{paragraph.key}}" translate-values="paragraph.interpolations"></p>
+            <br>
+
+            <!--<div class="question" ng-repeat="question in model.questions[model.currentGroupIndex] track by $index">
+                <div id="question-{{$index}}" ng-if="question.visible">
+                    <question item="question" lang-code="langCode"></question>
+                </div>
+            </div>-->
+        </div>
+
+    <div class="navigation">
+        <div class="col-md-5 col-md-offset-6 col-lg-6 col-lg-offset-5">
+            <div class="start" ng-click="start()">
+                {{'GENERAL_NAVIGATION_BUTTONS_START' | translate}}
+            </div>
+        </div>
+    </div>

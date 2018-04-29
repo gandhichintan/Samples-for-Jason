@@ -1,0 +1,52 @@
+﻿.copyright-container {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 8px;
+    margin-bottom: -15px;
+}
+
+.copyright-container a{
+    color: #AEADB3 !important;
+}
+
+@media (min-width: 2000px){
+    .copyright-container{
+        font-size: 20px !important;
+    }
+}
+
+.copyright-container a, .copyright-container span {
+    color: ;
+}
+
+.copyright-container.black a, .copyright-container.black span {
+    color: #AEADB3 !important;
+}
+
+.copyright-msg, .patents-pending, .privacy-policy, .legal-advise, .raffle-terms, .powered-by, .cv-logo-wrapper, .copyright-logo {
+    display: inline-block;
+}
+
+.copyright-logo {
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: -5px;
+}
+
+.copyright-container a {
+    color: black;
+    text-decoration: none;
+}
+
+    .copyright-container a:hover {
+        text-decoration: underline;
+    }
+
+.copyright-container i {
+    display: inline-block;
+    width: 88px;
+    height: 20px;
+    margin-bottom: -10.2px;
+    background-image: url('../../../company_res/TellTacoTimeNW.Survey/survey/web/powered_by_gray.png');
+}

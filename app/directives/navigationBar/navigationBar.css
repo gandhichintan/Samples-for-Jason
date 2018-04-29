@@ -1,0 +1,128 @@
+﻿
+
+/*#thankyou .navigation{
+    display:none;
+}*/
+
+
+
+ /*.button{
+     color: black;
+}*/
+
+/*.button-previous{
+    
+    width:45%;
+}
+
+.button-next{
+    text-align:right;
+    width:45%;
+}
+
+ .button-text{
+     font-weight:300;
+     display:inline-block;
+     vertical-align:middle;
+
+ }
+
+.navigation .button.button-previous .button-image { 
+    background-image: url("../../../company_res/destinationmaternity.Survey/survey/web/button-back.png");
+}
+
+
+ .navigation .button.button-next .button-image {     
+  background-image: url("../../../company_res/destinationmaternity.Survey/survey/web/button-next.png");
+}
+
+     .navigation .button.button-next.hover .button-image {
+         background-image: url("../../../company_res/destinationmaternity.Survey/survey/web/button-next-mo.png") !important;
+    }
+
+    .navigation .button.button-previous.hover .button-image {
+        background-image: url("../../../company_res/destinationmaternity.Survey/survey/web/button-back-mo.png") !important;
+    }
+
+body:not(.mobile-browser) .navigation .button.button-previous:hover .button-image {
+      background-image: url("../../../company_res/destinationmaternity.Survey/survey/web/button-back-mo.png");
+   }
+
+ body:not(.mobile-browser) .navigation .button.button-next:hover .button-image {
+      background-image: url("../../../company_res/destinationmaternity.Survey/survey/web/button-next-mo.png");
+    }
+
+  body:not(.mobile-browser) .button:hover{
+        color:lightgray;
+    }
+    .button.hover{
+     color:lightgray;
+    }*/
+    /* BUTTONS */
+
+    /*.navigation .button {
+    display: inline-block;
+    height: 40px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    }*/
+
+
+/*.navigationButton {
+    float: left;
+    width: 44px;
+    display: inline-block;
+    cursor: pointer;
+}*/
+
+
+/*@media (min-width: 820px) {
+     .button-image{
+         background-repeat:no-repeat;
+         display:inline-block;
+         background-size:contain;
+         height:45px;
+         width:45px;
+         vertical-align:middle;
+    }
+     .navigation {
+        height: 44px;
+        position:absolute;
+        width:340px;
+        bottom:40px;
+        right:35px;
+        z-index:0;
+    }
+}*/
+
+
+/*@media (max-width: 820px) {
+    .navigationButton {
+        width: 40px;
+    }
+    .button-previous{
+    
+        width:50%;
+    }
+
+    .button-next{
+        text-align:right;
+        width:49%;
+    }
+     .button-image{
+         background-repeat:no-repeat;
+         display:inline-block;
+         background-size:contain;
+         height:40px;
+         width:40px;
+         vertical-align:middle;
+     }
+
+    .navigationProgressBarContainer {
+        width: 118px;
+    }
+
+
+
+
+}*/

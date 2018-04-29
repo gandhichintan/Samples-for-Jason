@@ -1,0 +1,20 @@
+.cv-timepicker-popup{
+    width: 92%;
+    height: 15em;
+    overflow-y: scroll;
+    cursor: pointer;
+    ul{
+        &:hover, a:hover{
+            background-color: $tacoGreen !important;
+            color: white !important;
+        }
+    }
+}
+    .dropdown-menu > .active > a{
+        background-color: $tacoGreen !important;
+        color: white !important;
+    }
+       .dropdown-menu > li > a{
+        padding: 1em 0.2em !important;
+        padding-left: 1em !important;
+    }

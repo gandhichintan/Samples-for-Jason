@@ -1,0 +1,14 @@
+﻿<div class="boolQuestionContainer">
+    <div class="btn-group">
+        <label class="btn btn-default"
+               ng-click="select(data.properties.options[0])"
+               ng-class="{active: isSelected(data.properties.options[0])}">
+            {{data.properties.options[0].text}}
+        </label>
+        <label class="btn btn-default"
+               ng-click="select(data.properties.options[1])"
+               ng-class="{active: isSelected(data.properties.options[1])}">
+            {{data.properties.options[1].text}}
+        </label>
+    </div>
+</div>

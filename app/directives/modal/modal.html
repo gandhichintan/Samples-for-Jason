@@ -1,0 +1,29 @@
+﻿<div class="cv-modal modal" data-backdrop="{{isDismissible()}}" data-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- HEADER -->
+            <!--<div class="modal-header">
+                <p ng-repeat="item in headerContent">
+                    <modal-widget data="item"></modal-widget>
+                </p>
+            </div>-->
+            <!-- BODY -->
+            <!--<div class="modal-body">
+                <p ng-repeat="item in bodyContent">
+                    <modal-widget data="item"></modal-widget>
+                </p>
+            </div>-->
+            <!-- FOOTER -->
+            <div class="modal-footer">
+                <div class="clearfix"></div>
+                <ul class="list-inline">
+                    <li ng-repeat="button in footer">
+                        <button class="btn {{button.class}}" ng-click="runCallback(button.callback)">
+                            <span ng-bind-html="button.getContent() | unsafe"></span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

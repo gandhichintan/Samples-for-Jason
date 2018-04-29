@@ -1,0 +1,7 @@
+	<div class="checkbox left">
+		<span ng-repeat="option in options">
+			<input id="{{name}}_{{$index}}" type="checkbox" name="test" ng-value="option"  ng-checked="option.checked">
+			<label ng-click="option.checked = !option.checked" for="{{option}}">{{option.value}}</label>
+			<br>
+		</span>	
+	</div>

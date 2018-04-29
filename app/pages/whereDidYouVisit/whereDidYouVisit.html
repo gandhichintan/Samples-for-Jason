@@ -1,0 +1,42 @@
+        <div class="col-sm-12 col-md-5 col-lg-5 col-xs-12 questionsContainer animated fadeIn" ng-cloak>
+            <h2 ng-if="model.title" translate="{{model.title.key}}" translate-value="model.title.interpolations"></h2><br />
+            <p translate="{{texts[0].key}}" translate-values="texts[0].interpolations"></p>
+            <div class="question">
+                <div class="" id="question--0">
+                    <question item="model.questions[model.currentGroupIndex][0]" lang-code="langCode"></question>
+                </div>
+            </div>
+            <p translate="{{texts[1].key}}" translate-values="texts[1].interpolations"></p>
+            <div class="question">
+                <div class="" id="question--1">
+                    <question item="model.questions[model.currentGroupIndex][1]" lang-code="langCode"></question>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p translate="{{texts[2].key}}" translate-values="texts[2].interpolations"></p>
+                    <div class="question">
+                        <div class="" id="question--2">
+                            <question item="model.questions[model.currentGroupIndex][2]" lang-code="langCode"></question>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p translate="{{texts[3].key}}" translate-values="texts[3].interpolations"></p>
+                    <div class="question">
+                        <div class="" id="question--3">
+                            <question item="model.questions[model.currentGroupIndex][3]" lang-code="langCode"></question>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p translate="{{texts[4].key}}" translate-values="texts[4].interpolations"></p>
+            <div class="question">
+                <div class="" id="question--4">
+                    <question item="model.questions[model.currentGroupIndex][4]" lang-code="langCode"></question>
+                </div>
+            </div>
+        </div>
+    <div class="col-md-5 col-md-offset-6 col-lg-5 autoMinHeight">
+        <navigation-bar></navigation-bar>
+    </div>

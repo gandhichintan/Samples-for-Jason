@@ -1,0 +1,43 @@
+﻿<div>
+    <ul class="multi-option-question-list" ng-class="{true: 'singleChoice'}[isSingleChoice]">
+        
+        <li ng-repeat="option in options"
+            ng-class="{'active' : isSelected(option,$index), 'horizontal' : isSingleChoice}"
+            ng-click="toggleIfClickable(option,$index)">
+            
+            <div class="option-container" ng-class="{'custom-checkbox-wrapper':customSprites && !isSingleChoice , 'custom-radio-wrapper':isSingleChoice}">
+                <div class="input-wrapper">
+                    <i class="{{getGlyphClass(option)}}"
+                       ng-if="glyphicons"
+                       ng-click="toggle(option,true,$index,$event)">
+                    </i>
+                    <div class="checkbox"
+                         ng-if="!glyphicons && customSprites &&!isSingleChoice"
+                         ng-class="{'active' : isSelected(option,$index)}"
+                         ng-click="toggle(option,true,$index,$event)"
+                         ng-model="nomodelauxvariablefortarget">
+                    </div>
+                    <div class="custom-radio"
+                         ng-if="!glyphicons && customSprites && isSingleChoice"
+                         ng-class="{'active' : isSelected(option)}"
+                         ng-click="toggle(option)"
+                         ng-model="nomodelauxvariablefortarget">
+                    </div>
+                    <input type="checkbox"
+                           ng-if="!customSprites && !glyphicons && !isSingleChoice"
+                           ng-disabled="maxChoicesLimitReached() && !isSelected(option)"
+                           ng-click="toggle(option)"
+                           ng-checked="isSelected(option)" />
+                    <input type="radio"
+                           ng-if="!customSprites && !glyphicons && isSingleChoice"
+                           ng-click="toggle(option)"
+                           ng-checked="isSelected(option)" />
+                </div>
+                <div class="text-wrapper" translate="{{getText(option)}}" translate-values="getInterpolations(option)">
+                    <i class="extra-icon {{extraIconClass}}" ng-show="isSelected(option)"></i>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <!--<br class="clearfix" />-->
+</div>

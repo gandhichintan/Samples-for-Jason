@@ -1,0 +1,39 @@
+﻿<div class="page-standard-layout">
+    <div class="page-left">
+        <div class="page-content"></div>
+        <quote data="quote"></quote>
+    </div>
+    <!--<div class="rings"></div>-->
+    <div class="page-right">
+        <div class="page-content">
+            <form>
+                <h1 ng-if="title" class="title" translate="{{title.key}}" translate-values="title.interpolations"></h1>
+               
+                <p class="header-text" ng-repeat="headerParagraph in header track by $index" translate="{{headerParagraph.key}}" translate-values="headerParagraph.interpolations"></p>
+                <p ng-repeat="paragraph in texts track by $index" translate="{{paragraph.key}}" translate-values="paragraph.interpolations"></p>
+                <div class="questions-row">
+                    <div class="col-lg-12 col-sm-12">
+                        <!-- QUESTIONS -->
+                        <div class="row question" ng-repeat="question in questions track by $index">
+                            <div class="col-lg-12 col-sm-12" id="question-{{$index}}" ng-if="question.visible">
+                                <question item="question"></question>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="footer-texts-row">
+                <div class="col-lg-12 col-sm-12">
+                    <p ng-repeat="paragraph in footer track by $index" class="footer-text" translate="{{paragraph.key}}" translate-values="paragraph.interpolations"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pusher"></div>
+    <div class="page-loading-box">
+        <div class="invitation-page-loading-box-msg">
+            <div class="loader-image"></div>
+        </div>
+    </div>
+</div>
+

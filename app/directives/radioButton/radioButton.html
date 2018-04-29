@@ -1,0 +1,9 @@
+<div class="radioButton">
+	<span ng-repeat="option in data.properties.options">
+		<input id="{{value}}_{{$index}}" type="radio" name="rb" ng-value="value" ng-checked="active == $index">
+		<label ng-click="check($index, $event)" for="{{option}}" translate="{{option.text}}" translate-values="option.text.interpolations"></label>
+	</span>	
+</div>
+
+
+

@@ -1,0 +1,15 @@
+﻿<div class="col-xs-12">
+    <ul class='multi-option-image-question'>
+        <li ng-repeat='option in vm.options track by $index' class='col-md-4 col-sm-12 col-xs-12 text-center option option-{{$index}}'
+            ng-class='{selected: vm.isSelected(option), mouseover: vm.mouseIsOver(option), notSelected: vm.isSelected(option)}'
+            ng-click="vm.click(option)" ng-mouseover="vm.stepOver(option)"
+            ng-mouseleave="vm.leave(option)">
+            <div class="text-container">
+                <div class="text-wrapper">
+                    {{option.text | translate}}
+                </div>
+            </div>
+        </li>
+        <li class="puller"></li>
+    </ul>
+</div>
